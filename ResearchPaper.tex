@@ -1,0 +1,201 @@
+\documentclass{report}
+\usepackage{setspace} % Setting line spacing
+\usepackage[normalem]{ulem} % Underline
+\usepackage{caption} % Captioning figures
+\usepackage{subcaption} % Subfigures
+\usepackage{geometry} % Page layout
+\usepackage{multicol} % Columned pages
+\usepackage{array,etoolbox}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage[toc,page]{appendix}
+\usepackage{titlesec} % Section formatting
+
+\usepackage[backend=biber,style=apa,citestyle=authoryear]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
+\DeclareFieldFormat{journaltitle}{\textit{#1}}
+\DeclareFieldFormat[article]{volume}{\textit{#1}}
+\DeclareFieldFormat[misc]{title}{\textit{#1}}
+\DeclareFieldFormat[inbook]{booktitle}{\textit{#1}}
+\DeclareFieldFormat[book]{title}{\textit{#1}}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+\addbibresource{references.bib}
+
+\titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
+
+\AtBeginEnvironment{quote}{\par\onehalfspacing\small} % Block quotes
+
+% Page layout (margins, size, line spacing)
+\geometry{letterpaper, left=1in, right=1in, bottom=1in, top=1in}
+\setstretch{2}
+
+% Headers
+\pagestyle{fancy}
+\lhead{ERST2601 Final Research}
+\rhead{Jayden Lefebvre}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1.2cm}
+
+        \textbf{Addressing Food Insecurity in Yellowknife Dene First Nation: The Synthesis of Western Agricultural Sciences with Endangered Traditional Foodways in Understanding Indigenous Food Sovereignty}
+
+        \vspace{2cm}
+
+        Jayden Lefebvre\\
+
+        \vspace{5cm}
+        
+        Trent University\\
+        ERST 2601Y 2024WI\\
+        Dr. Dan Longboat\\
+
+        \vfill
+
+        March 17th, 2025
+        
+    \end{center}
+\end{titlepage}
+
+\thispagestyle{plain}
+\tableofcontents
+
+\clearpage
+
+\section{Introduction}
+
+\subsection{Position}
+
+% explaining my position, perspective, lens - it is all that I know.
+
+% - Genealogical position
+%     - Where was I born - Oshawa, working middle class,
+%     - My background - Mixed European settler heritage (French, Irish, English, Scottish)
+%     - “I have grown up with certain privileges attributed to the exploitative and violent processes of colonization” - Colonization separates People from Land, Each Other, and Themselves
+% - Cultural values
+%     - What my parents taught me - Father: Problem-Solving, Objectivity; Mother: Empathy, Pacifism
+%     - What I’ve learned and done - Research, Engineering, Critical Thinking, Self-Reflection
+%     - I am an OUTSIDER. I recognize that the things I will attempt to talk about are more than they appear to my eyes.
+% - Academic
+%     - Curriculum vitae
+%     - Methodology
+%     - 5 Rs (respect, relationship, reciprocity, responsibility, restoration), Two-Eyed Seeing, Bio-cultural Framework
+
+\hspace{24pt} I will begin by explaining my position as it pertains to the subject of this research. I was born at the turn of the 21st century in Oshawa, Ontario, Canada on the land within the traditional territory of the Michi Saagiig Nishnaabeg, where I continue to live, work, and study in and around Peterborough, known traditionally as Nogojiwanong. I was raised in a white Christian working-middle-class family, with two gainfully-employed and able-bodied parents. My father, who is of mixed French and Irish immigrant heritage, is a skilled tradesman and entrepreneur who who taught me objectivity, problem-solving skills, and Western science. My mother, who is of mixed English and Scottish settler heritage, is a unionized secondary school teacher of English and History who instilled in me the importance of compassion, pacifism, and humility. Both of my parents exemplified self-reliance and independence, and raised me to value the transformative processes of education and self-improvement, and to not be ashamed of who I am.
+
+\hspace{24pt} I have grown up with certain privileges attributed to the exploitative and violent processes of colonization. I have never experienced and will likely never experience food insecurity, homelessness, or discrimination. I will never understand what it means to be Indigenous, or to be the subject of a victimizing and exclusionary society. As such I recognize that the things I will attempt to talk about here are more than they appear to my eyes. Despite this fact, I will do my utmost to approach this research with humility and respect, and to acknowledge the limitations of my perspective as best I can.
+
+\clearpage
+
+\subsection{Literature Review}
+
+% Food insecurity and Yellowknife Dene First Nation (YDFN)
+
+  % What is food insecurity? How is it measured? What are the causes? (StatsCan)
+    % Monetary - food import and cost, unemployment and poverty
+    % Environmental barriers to local production - Permafrost, arable land, community funding
+
+\hspace{24pt} Food insecurity is a complex phenomenon that has disproportionately and severely affected the standard of living of Indigenous peoples in Canada.
+Statistics Canada and Health Canada define food insecurity as “the inability to acquire or consume an adequate diet quality or sufficient quantity of food in socially acceptable ways, or the uncertainty that one will be able to so" \parencite{statscanfoodinsecurity}.
+A report generated by an expert panel on behalf of the Council of Canadian Academies in 2014 published the following finding:
+
+\begin{quote}
+  "Rates of food insecurity were more pronounced among adult respondents in the 16 communities of the Dene Nation of the NWT: from 2008 to 2010, more than 90\% of the 824 respondents indicated that in the 12 months before the survey, they or other adults in their household either had cut the size of their meals or skipped meals, were hungry but did not eat, or ate less than they felt they should — in all cases, due to a lack of money for food" \parencite{aboriginalfoodsecurity}
+\end{quote}
+
+  % How is the YDFN affected? What are the consequences of food insecurity? What are the root causes?
+
+\hspace{24pt} The Dene First Nation peoples have inhabited Yellowknife, Northwest Territories, Canada and have inherited a complex and evolving traditional knowledge system of the land and its environment since time immemorial \parencite{lorecapturingtraditional}.
+The food security of the peoples of the Yellowknife Dene First Nation (YKDFN) largely relies on the gathering of wild food sources for sustenance;
+Boyd et al. evaluated through structured interviews conducted in 2005 that "subsistence harvesting continues to play an important role [alongside] participation in some form of wage-earning labour" \parencite{socialculturalcapital}.
+
+% Endangered traditional foodways of the YDFN
+
+  % What are the traditional foodways of the YDFN? Why are they important (relational context)? What are the consequences of their loss?
+    % Hunting i.e. caribou, gathering i.e. berries
+  % How are traditional foodways endangered by environmental changes? What are the root causes?
+    % deforestation and ecological degradation, anthropogenic climate change, 
+
+\hspace{24pt} Many of the traditional foodways of the peoples of the Dene First Nation are at risk of endangerment due to the multiplicity of factors associated with anthropogenic activity in the Yellowknife region, including deforestation, mining, and climate change \parencite{denefoodwaysontologies}.
+It has been reported that "traditional activities [of the YKDFN] such as hunting, fishing and eating wild foods have changed throughout the past ten years" \parencite{socialculturalcapital}:
+traditional hunting and trapping grounds have been lost to human settlement and mining activities, and fisheries, drinking water sources, and wild berry and medicine harvesting have had to relocate due to concerns over contamination from industrial activities \parencite{riskperceptions}.
+
+% \hspace{24pt} 
+
+% Indigenous food sovereignty
+
+  % What is food sovereignty?
+    % Healthy and culturally appropriate, ecologically sound and sustainable, local and independent
+    % Biocultural framework - how does food sovereignty relate people to land, each other, and themselves?
+  % What solutions exist presently? What are their limitations (community independence)?
+    % Community gardens, greenhouses, food banks, food programs
+
+\subsection{Research Question}
+
+% Foodways and Technology
+
+  % What is the historical role of technology in Indigenous food production?
+    % Tools and weapons, irrigation and agriculture, preservation and storage
+  % What is the role of technology in Western agriculture?
+    % Mechanization/industrialization, chemical agriculture and bioengineering, automation and robotics
+  % How can technology be used to support Indigenous food sovereignty?
+    % Greenhouses, hydroponics, aquaponics - case studies (i.e. northern vertical farming)
+
+% Endangering Foodways and Anthropogenic Climate Change
+  % How have traditional foodways been endangered by anthropogenic climate change?
+
+
+% Exploring solutions to systemic problem of food insecurity through Two-Eyed Seeing and translocal knowledge exchange
+
+% Thesis: the synthesis of technologies with indigenous food sovereignty practices can play a role in addressing food insecurity in permafrosted northern regions in the age of anthropogenic climate change and endandered traditional foodways
+
+\hspace{24pt} The purpose of this research is threefold:
+to explore the potential for the synthesis of Western technologies with traditional Indigenous foodways in addressing food insecurity through Two-Eyed Seeing;
+to examine and evaluate existing cases of this synthesis as they apply to Indigenous food sovereignty in the age of anthropogenic climate change and endangering of traditional foodways, and;
+to propose how this learning might address food insecurity for the YKDFN through translocal knowledge exchange.
+
+% \section{Literature Review}
+
+% \subsection{Food Insecurity \& Endangered Traditional Foodways}
+
+% \subsection{Indigenous Food Sovereignty}
+
+% \subsection{Western Agricultural Technology}
+
+% \section{Methodology}
+
+% \subsection{Two-Eyed Seeing}
+
+% \subsection{Translocal Knowledge Exchange}
+
+% \section{Case Studies}
+
+  % Degrees of success in addressing food insecurity in northern communities
+  % Degrees of adherence to Indigenous food sovereignty principles
+  % Degrees of automation/technological integration
+
+% \subsection{Community Greenhouses}
+
+% \subsection{Aquaponics}
+
+% \subsection{Vertical Farming in the North}
+
+% \section{Discussion}
+
+\section{Conclusion}
+
+\hspace{24pt} The applicability of Western technologies to the traditional foodways of the Yellowknife Dene First Nation is an incomplete solution, and does not address the spiritual and social aspects of culture that are integral to the foodways of the Indigenous peoples of the Dene First Nation.
+"For the traditional Dene, ideology is a fundamental element of subsistence, as important as practical empirical knowledge and appropriate technology" \parencite{lorecapturingtraditional}.
+It is feared that, should it come to it, the Indigenous people of Canada's north may be forced to choose between adequate food security and the preservation of ancestral traditions due to the effects of anthropogenic activity in the region. 
+For example, "many of the social problems facing Indigenous peoples~\ldots~can be linked to the social vacuum that was created when harvesting ceased as the major focus of life" \parencite{socialculturalcapital}.
+
+\clearpage
+
+% References
+\printbibliography
+
+\end{document}
